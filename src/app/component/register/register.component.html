@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 style="text-align: center">Registration</h2>
+            <form [formGroup]="userForm" (ngSubmit)="Save(userForm.value)">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your firstname"
+                        formControlName="firstName">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your Lastname"
+                        formControlName="lastName">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your fatherName"
+                        formControlName="fatherName">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your date of birth"
+                        formControlName="dateOfBirth">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="please Enter your mobile number"
+                        formControlName="mobileNumber">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your email id"
+                        formControlName="emailId">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your Pan Card number"
+                        formControlName="PanCardNumber">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your Id proof"
+                        formControlName="IDProof">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your country"
+                        formControlName="country">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your state"
+                        formControlName="state">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your city" formControlName="city">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="please Enter your pin code"
+                        formControlName="pinCode">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your address"
+                        formControlName="address">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="please Enter your  unique userName"
+                        formControlName="userName">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="please Enter your password"
+                        formControlName="password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-md">Submit</button>
+
+            </form>
+        </div>
+
+    </div>
+</div>

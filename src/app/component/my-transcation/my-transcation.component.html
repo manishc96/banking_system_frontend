@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white ">
+                    Transcation
+                </div>
+
+
+                <div class="card-body">
+                    <div class="container">
+                        <table class="table ">
+                            <thead>
+                                <tr>
+                                    <th>Account Number</th>
+                                    <th>Account Type</th>
+                                    <th>Deposit</th>
+                                    <th>Withdraw</th>
+                                    <th>Balance Amount</th>
+                                    <th>Edit Withdraw</th>
+                                    <th>Edit Deposit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of userTranscation">
+                                    <td>{{data.id}}</td>
+                                    <td>{{data.accType}}</td>
+                                    <td>{{data.deposit}}</td>
+                                    <td>{{data.withdraw}}</td>
+                                    <td>{{data.balance_amount}}</td>
+                                    <td> <a routerLink="/withdraw/{{data.id}}">
+                                            <i class="material-icons">withdraw</i>
+                                        </a> </td>
+                                    <td> <a routerLink="/deposit/{{data.id}}">
+                                            <i class="material-icons">deposit</i>
+                                        </a> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer">Created by vs 2020</div>
+                </div>
+            </div>
+        </div>
+    </div>

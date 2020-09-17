@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="col-6">
+        <h3 style="text-align: center;">Withdraw</h3>
+        <form [formGroup]="withdraw" (ngSubmit)="Save(withdraw.value)">
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="enter withdrawal amount"
+                    formControlName="withdraw" [class.is-valid]="withdraw.controls.withdraw.valid"
+                    [class.is-invalid]="!withdraw.controls.withdraw.valid && withdraw.controls.withdraw.touched">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please choose a amount.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-md">Submit</button>
+        </form>
+    </div>
+
+</div>

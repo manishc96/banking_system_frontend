@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white ">
+                    Transcation
+                </div>
+
+
+                <div class="card-body">
+                    <div class="container">
+                        <table class="table ">
+                            <thead>
+                                <tr>
+                                    <th>Account Number</th>
+                                    <th>userId</th>
+                                    <th>Balance Amount</th>
+                                    <th>view transaction</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of transaction">
+                                    <td>{{data.id}}</td>
+                                    <td>{{data.user_id}}</td>
+                                    <td>{{data.balance_amount}}</td>
+                                    <td> <a routerLink="/usertranscation/{{data.user_id}}">
+                                            <i class="material-icons">view transaction</i>
+                                        </a> </td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer">Created by vs 2020</div>
+                </div>
+            </div>
+        </div>
+    </div>
