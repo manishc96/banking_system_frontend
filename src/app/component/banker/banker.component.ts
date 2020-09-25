@@ -7,7 +7,7 @@ import { UserRegisterServices } from 'src/app/shared/Services/user.service';
   styleUrls: ['./banker.component.css']
 })
 export class BankerComponent implements OnInit {
-  public transaction
+  public transaction: any;
   constructor(private transcationService: UserRegisterServices) { }
 
   ngOnInit() {

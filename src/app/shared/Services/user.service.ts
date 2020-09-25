@@ -1,11 +1,13 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders, HttpClientModule } from "@angular/common/http";
+import { HttpClient, HttpHeaders, HttpClientModule, HttpErrorResponse, HttpResponse } from "@angular/common/http";
 import { Router } from "@angular/router";
-import { map, debounceTime } from "rxjs/operators";
-import { BehaviorSubject, Observable } from "rxjs";
+import { map, debounceTime, catchError } from "rxjs/operators";
+import { BehaviorSubject, Observable, throwError } from "rxjs";
 import { Iuser } from '../model/login';
 import { Iregister } from '../model/register';
-import { ITranscation } from '../model/product';
+import { ITranscation } from '../model/Transcation';
+import { Iaccount } from '../model/account';
+import { error } from 'protractor';
 @Injectable({
     providedIn: "root"
 })
@@ -65,6 +67,10 @@ export class UserRegisterServices {
     }
     getDeposit(id, deposit) {
         return this.http.put(this.depositEndPoint + `/${id}`, JSON.stringify(deposit), { headers: this.header })
+
+    }
+    addAccount(item: Iaccount) {
+        return this.http.post(this.transcationEndPoint, JSON.stringify(item), { headers: this.header })
     }
     logout() {
         localStorage.removeItem('currentUser');
@@ -72,4 +78,7 @@ export class UserRegisterServices {
         location.reload();
         this.router.navigateByUrl('/login');
     }
+    // private handleError(error: HttpErrorResponse) {
+    //     if (error.s) 
+    // }
 }

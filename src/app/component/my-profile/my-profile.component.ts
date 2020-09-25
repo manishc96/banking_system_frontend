@@ -25,7 +25,7 @@ export class MyProfileComponent implements OnInit {
       this.register = data;
     });
     this.transcationService.getUser(this.userId).subscribe((data) => {
-      this.user = data;
+      this.user = Object(data);
       console.log(this.user)
 
     })

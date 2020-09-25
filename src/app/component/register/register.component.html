@@ -5,62 +5,168 @@
             <form [formGroup]="userForm" (ngSubmit)="Save(userForm.value)">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="please Enter your firstname"
-                        formControlName="firstName">
+                        formControlName="firstName" [class.is-valid]="userForm.controls.firstName.valid"
+                        [class.is-invalid]="!userForm.controls.firstName.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid first name.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="please Enter your Lastname"
-                        formControlName="lastName">
+                        formControlName="lastName" [class.is-valid]="userForm.controls.lastName.valid"
+                        [class.is-invalid]="!userForm.controls.lastName.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid last name.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="please Enter your fatherName"
-                        formControlName="fatherName">
+                        formControlName="fatherName" [class.is-valid]="userForm.controls.fatherName.valid"
+                        [class.is-invalid]="!userForm.controls.fatherName.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid father name.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="please Enter your date of birth"
-                        formControlName="dateOfBirth">
+                        formControlName="dateOfBirth" [class.is-valid]="userForm.controls.dateOfBirth.valid"
+                        [class.is-invalid]="!userForm.controls.dateOfBirth.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a date of birth.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="number" class="form-control" placeholder="please Enter your mobile number"
-                        formControlName="mobileNumber">
+                        formControlName="mobileNumber" [class.is-valid]="userForm.controls.mobileNumber.valid"
+                        [class.is-invalid]="!userForm.controls.mobileNumber.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid mobile number.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="please Enter your email id"
-                        formControlName="emailId">
+                        formControlName="emailId" [class.is-valid]="userForm.controls.emailId.valid"
+                        [class.is-invalid]="!userForm.controls.emailId.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid emailId.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="please Enter your Pan Card number"
-                        formControlName="PanCardNumber">
+                        formControlName="PanCardNumber" [class.is-valid]="userForm.controls.PanCardNumber.valid"
+                        [class.is-invalid]="!userForm.controls.PanCardNumber.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid pan card number.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="please Enter your Id proof"
-                        formControlName="IDProof">
+                        formControlName="IDProof" [class.is-valid]="userForm.controls.IDProof.valid"
+                        [class.is-invalid]="!userForm.controls.IDProof.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a Id proof.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="please Enter your country"
-                        formControlName="country">
+                        formControlName="country" [class.is-valid]="userForm.controls.country.valid"
+                        [class.is-invalid]="!userForm.controls.country.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid country&It should have minimum 3 characters of your country.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="please Enter your state"
-                        formControlName="state">
+                        formControlName="state" [class.is-valid]="userForm.controls.state.valid"
+                        [class.is-invalid]="!userForm.controls.state.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid state & it should have minimum 3 charactes of your state.
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="please Enter your city" formControlName="city">
+                    <input type="text" class="form-control" placeholder="please Enter your city" formControlName="city"
+                        [class.is-valid]="userForm.controls.city.valid"
+                        [class.is-invalid]="!userForm.controls.city.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid cityIt should have minimum 3 characters of your city.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="number" class="form-control" placeholder="please Enter your pin code"
-                        formControlName="pinCode">
+                        formControlName="pinCode" [class.is-valid]="userForm.controls.pinCode.valid"
+                        [class.is-invalid]="!userForm.controls.pinCode.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid pincode/zipcode.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="please Enter your address"
-                        formControlName="address">
+                        formControlName="address" [class.is-valid]="userForm.controls.address.valid"
+                        [class.is-invalid]="!userForm.controls.address.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid address.
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="please Enter your  unique userName"
-                        formControlName="userName">
+                        formControlName="userName" [class.is-valid]="userForm.controls.userName.valid"
+                        [class.is-invalid]="!userForm.controls.userName.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid username.It should be minimum 3 characters
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="please Enter your password"
-                        formControlName="password">
+                        formControlName="password" [class.is-valid]="userForm.controls.password.valid"
+                        [class.is-invalid]="!userForm.controls.password.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a password.It should be minimum 3 characters
+                    </div>
                 </div>
                 <button type="submit" class="btn btn-primary btn-md">Submit</button>
 

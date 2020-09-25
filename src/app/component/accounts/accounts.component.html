@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 style="text-align: center;">Account</h2>
+            <form [formGroup]="userForm" (ngSubmit)="Save(userForm.value)">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="enter account type" formControlName="accType"
+                        [class.is-valid]="userForm.controls.accType.valid"
+                        [class.is-invalid]="!userForm.controls.accType.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a account type.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="enter account type" formControlName="user_id"
+                        [class.is-valid]="userForm.controls.user_id.valid"
+                        [class.is-invalid]="!userForm.controls.user_id.valid && submitted">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a account type.
+                    </div>
+                </div>
+                <a routerLink="/account">New account</a>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary btn-md">Submit</button>
+            </form>
+        </div>
+    </div>

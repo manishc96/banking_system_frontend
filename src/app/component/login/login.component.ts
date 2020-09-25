@@ -23,15 +23,12 @@ export class LoginComponent implements OnInit {
   }
   Save(data: Iuser) {
     this.submitted = true;
+    if (!this.userForm.valid) { return; }
     this.login.userLogin(data).subscribe(data => {
-      console.log(data);
       if (data.d) {
         this.router.navigate(['mytranscation']).then(() =>
           window.location.reload())
       }
     })
-    if (!this.userForm.valid) { return; }
-    console.log(data);
   }
-
 }

@@ -29,7 +29,6 @@ export class DepositComponent implements OnInit {
     }
     const id = this.ActivateRoute.snapshot.params['id'];
     this.DepositService.getDeposit(id, item).subscribe((data: any) => {
-      console.log(data);
       alert('added  amount deposited successfully');
       this.location.back()
     })

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserRegisterServices } from 'src/app/shared/Services/user.service';
 import { Location } from '@angular/common';
+import { error } from 'protractor';
 
 @Component({
   selector: 'app-withdraw',
@@ -30,10 +31,14 @@ export class WithdrawComponent implements OnInit {
     const id = +this.ActivateRoute.snapshot.paramMap.get('id');
 
     this.WithdrawService.getWithdraw(id, item).subscribe((data: any) => {
-      console.log(data);
-      alert('added amount withdraw successfully');
+      alert('amount withdraw successfully');
       this.location.back();
-    })
+    },
+      (error) => {
+        alert(error.error.message)
+
+      })
+
   }
 
 }

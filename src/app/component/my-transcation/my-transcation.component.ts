@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ITranscation } from 'src/app/shared/model/product';
+import { ITranscation } from 'src/app/shared/model/Transcation';
 import { UserRegisterServices } from 'src/app/shared/Services/user.service';
 
 @Component({
@@ -21,13 +21,6 @@ export class MyTranscationComponent implements OnInit {
     this.userId = this.currentUser.userId;
     this.transcationService.getUserTranscation(this.userId).subscribe((data) => {
       this.userTranscation = data;
-
-
     })
-
-
   }
-
-
-
 }

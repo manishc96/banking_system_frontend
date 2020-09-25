@@ -1,7 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10">
-            <div class="card border-primary">
+            <br>
+            <a routerLink='/account' style="font-size: 22px;margin-left:350px;">Create New Account</a>
+            <br>
+            <br>
+            <div class="card border-primary" *ngIf="userTranscation">
                 <div class="card-header bg-primary text-white ">
                     Transcation
                 </div>

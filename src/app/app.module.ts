@@ -15,6 +15,7 @@ import { WithdrawComponent } from './component/withdraw/withdraw.component';
 import { DepositComponent } from './component/deposit/deposit.component';
 import { BankerComponent } from './component/banker/banker.component';
 import { UserTranscationComponent } from './component/user-transcation/user-transcation.component';
+import { AccountsComponent } from './component/accounts/accounts.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { UserTranscationComponent } from './component/user-transcation/user-tran
     WithdrawComponent,
     DepositComponent,
     BankerComponent,
-    UserTranscationComponent
+    UserTranscationComponent,
+    AccountsComponent
   ],
   imports: [
     BrowserModule,
